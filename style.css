@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  /* container children */
+  .wrapper {
+    width: 400px;
+    height: 100%;
+    /* background-color: red; */
+    border-radius: 10px;
+    /* padding: 5px; */
+    border: 2px solid black;
+    box-shadow: 0 0 8px #e7e7e7;
+
+    /* wrapper children */
+    section {
+      padding: 5px;
+      /* border: 2px solid rgb(148, 206, 93); */
+      height: 88%;
+      overflow-y: scroll;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .heading {
+      text-align: center;
+      padding: 8px 0;
+      margin-bottom: 10px;
+    }
+    .card {
+      height: 100px;
+      border-radius: 8px;
+      /* background-color: aqua; */
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 3fr 10fr;
+      overflow: hidden;
+      margin-bottom: 5px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.151);
+      /* card children */
+      .img-cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: blue; */
+
+        /* img children */
+        img {
+          width: 70px;
+        }
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5px;
+        /* background-color: orange; */
+
+        /* details children */
+        .row {
+          display: flex;
+          justify-content: space-between;
+
+          /* row children */
+          .coin-name,
+          .price {
+            font-size: 22px;
+            font-weight: 600;
+          }
+          .short-name,
+          .percentage {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
